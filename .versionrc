@@ -1,0 +1,8 @@
+{
+  "versionFile": "version.json",
+  "syncTargets": [],
+  "hooks": {
+    "enabled": true,
+    "preCommit": "patch"
+  }
+}
