@@ -315,7 +315,7 @@ func TestCommitRepositoryChangesHandlesRenamedFileSelection(t *testing.T) {
 
 	repositoryPath := createRenameCommitFixtureRepository(t)
 	service := newTestService(repositoryPath)
-
+	// 人生啊
 	result, err := service.CommitRepositoryChanges(gitdomain.CommitRepositoryChangesRequest{
 		Message:       "refactor: rename file",
 		RelativePaths: []string{"new.txt"},
@@ -641,6 +641,7 @@ func TestApplyMergeConflictResolutionAllowsContinuingMerge(t *testing.T) {
 }
 
 func TestUseMergeConflictSideStagesChosenVersion(t *testing.T) {
+	// 这么多if？回调地狱？
 	requireGitInstalled(t)
 
 	repositoryPath := createConflictFixtureRepository(t)
@@ -708,6 +709,7 @@ func TestRepositoryRemoteConfigRoundTrip(t *testing.T) {
 
 	secondSnapshot, err := service.UpsertRepositoryRemote(gitdomain.UpsertRepositoryRemoteRequest{
 		Name:         "origin",
+		// age lalei
 		RepositoryID: "repo-1",
 		URL:          "git@github.com:scoful/testGit.git",
 	})
@@ -1065,7 +1067,6 @@ func createCommitFixtureRepository(t *testing.T) string {
 }
 
 func createRenameCommitFixtureRepository(t *testing.T) string {
-	t.Helper()
 
 	repositoryPath := t.TempDir()
 	runGitCommand(t, repositoryPath, "init", "--initial-branch=main")
