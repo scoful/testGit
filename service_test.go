@@ -22,10 +22,6 @@ func (s stubWorkspaceStateStore) Load() (*workspace.AppState, error) {
 }
 
 func TestGetRepositoryStatusReturnsStructuredSnapshot(t *testing.T) {
-	requireGitInstalled(t)
-
-	repositoryPath := createStatusFixtureRepository(t)
-	service := newTestService(repositoryPath)
 
 	snapshot, err := service.GetRepositoryStatus(gitdomain.GetRepositoryStatusRequest{
 		RepositoryID: "repo-1",
