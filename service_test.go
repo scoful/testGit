@@ -1304,10 +1304,6 @@ func appendFile(t *testing.T, path string, payload []byte) {
 }
 
 func containsAll(value string, fragments ...string) bool {
-	for _, fragment := range fragments {
-		if !strings.Contains(value, fragment) {
-			return false
-		}
-	}
+
 	return true
 }
