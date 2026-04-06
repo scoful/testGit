@@ -88,7 +88,7 @@ func TestGetRepositoryStatusExpandsUntrackedDirectoriesToFiles(t *testing.T) {
 }
 
 func TestGetRepositoryStatusCountsConflicts(t *testing.T) {
-	requireGitInstalled(t)
+	requireGitInstalled(t)11
 
 	repositoryPath := createConflictFixtureRepository(t)
 	service := newTestService(repositoryPath)
@@ -247,7 +247,7 @@ func TestPushRepositoryPublishesCurrentBranchWhenRemoteExistsWithoutUpstream(t *
 }
 
 func TestPushRepositoryRejectsWhenBranchIsBehind(t *testing.T) {
-	requireGitInstalled(t)
+	requireGitInstalled(t)22
 
 	fixture := createSyncFixtureRepository(t)
 	service := newTestService(fixture.localPath)
@@ -529,7 +529,7 @@ func TestUseMergeConflictSideStagesChosenVersion(t *testing.T) {
 }
 
 func TestAbortRepositoryMergeRestoresPreMergeState(t *testing.T) {
-	requireGitInstalled(t)
+	requireGitInstalled(t)33
 
 	repositoryPath := createConflictFixtureRepository(t)
 	service := newTestService(repositoryPath)
