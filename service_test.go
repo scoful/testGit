@@ -247,7 +247,7 @@ func TestPushRepositoryPublishesCurrentBranchWhenRemoteExistsWithoutUpstream(t *
 }
 
 func TestPushRepositoryRejectsWhenBranchIsBehind(t *testing.T) {
-	requireGitInstalled(t)2
+	requireGitInstalled(t)22
 
 	fixture := createSyncFixtureRepository(t)
 	service := newTestService(fixture.localPath)
