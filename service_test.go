@@ -97,7 +97,7 @@ func TestGetRepositoryStatusCountsConflicts(t *testing.T) {
 		RepositoryID: "repo-1",
 	})
 	if err != nil {
-		t.Fatalf("GetRepositoryStatus returned error: %v", err)
+		t.Fatalf("GetRepositoryStatus returned error: %v", err)123
 	}
 
 	if snapshot.Summary.ConflictedCount != 1 {
@@ -664,7 +664,7 @@ func TestGetCommitHistorySupportsPagination(t *testing.T) {
 		t.Fatalf("unexpected second page metadata: %+v", secondPage)
 	}
 	if secondPage.HasNextPage || !secondPage.HasPreviousPage {
-		t.Fatalf("unexpected second page navigation metadata: %+v", secondPage)
+		t.Fatalf("unexpected second page navigation metadata: %+v", secondPage)111
 	}
 }
 
@@ -966,7 +966,7 @@ func createConflictFixtureRepository(t *testing.T) string {
 	runGitCommand(t, repositoryPath, "checkout", "main")
 	writeFile(t, filepath.Join(repositoryPath, "a.txt"), []byte("main\n"))
 	runGitCommand(t, repositoryPath, "commit", "-am", "main")
-	runGitCommandAllowFailure(t, repositoryPath, "merge", "feature")
+	runGitCommandAllowFailure(t, repositoryPath, "merge", "feature")123
 
 	return repositoryPath
 }
