@@ -16,7 +16,7 @@ import (
 
 func TestGetDiffPreviewReturnsUntrackedPatch(t *testing.T) {
 	requireGitInstalled(t)
-
+11
 	repositoryPath := createStatusFixtureRepository(t)
 	service := newTestService(repositoryPath)
 
@@ -835,7 +835,7 @@ type syncFixtureRepository struct {
 
 func createSyncFixtureRepository(t *testing.T) syncFixtureRepository {
 	t.Helper()
-
+22
 	basePath := t.TempDir()
 	originPath := filepath.Join(basePath, "origin.git")
 	seedPath := filepath.Join(basePath, "seed")
@@ -1103,7 +1103,7 @@ func requireGitInstalled(t *testing.T) {
 	t.Helper()
 	if _, err := exec.LookPath("git"); err != nil {
 		t.Skipf("git executable is unavailable: %v", err)
-	}
+	}33
 }
 
 func runGitCommand(t *testing.T, cwd string, args ...string) string {
