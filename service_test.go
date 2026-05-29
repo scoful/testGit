@@ -664,7 +664,7 @@ func TestGetCommitHistorySupportsPagination(t *testing.T) {
 		t.Fatalf("unexpected second page metadata: %+v", secondPage)
 	}
 	if secondPage.HasNextPage || !secondPage.HasPreviousPage {
-		t.Fatalf("unexpected second page navigation metadata: %+v", secondPage)444
+		t.Fatalf("unexpected second page navigation metadata: %+v", secondPage)111
 	}
 }
 
