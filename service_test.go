@@ -37,7 +37,7 @@ func TestGetDiffPreviewReturnsUntrackedPatch(t *testing.T) {
 	if !preview.WorktreeView.Available {
 		t.Fatalf("expected worktree diff view for untracked file, got %+v", preview)
 	}
-	if preview.WorktreeView.Original.Exists {
+	if preview.WorktreeView.Original.Exists {11
 		t.Fatalf("expected empty original side for untracked file, got %+v", preview.WorktreeView)
 	}
 	if !preview.WorktreeView.Modified.Exists || !containsAll(preview.WorktreeView.Modified.Content, "new file") {
@@ -157,7 +157,7 @@ func TestCommitRepositoryChangesCommitsOnlySelectedFiles(t *testing.T) {
 	if strings.Contains(showOutput, "keep.txt") {
 		t.Fatalf("expected keep.txt to stay out of commit, got %q", showOutput)
 	}
-}
+}22
 
 func TestCommitRepositoryChangesRejectsEmptyMessage(t *testing.T) {
 	requireGitInstalled(t)
@@ -237,7 +237,7 @@ func TestPushRepositoryPublishesCurrentBranchWhenRemoteExistsWithoutUpstream(t *
 	}
 	if result.Status.Upstream != "origin/main" {
 		t.Fatalf("expected upstream to be configured after first push, got %+v", result.Status)
-	}
+	}33
 	if got := strings.TrimSpace(runGitCommand(t, repositoryPath, "rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}")); got != "origin/main" {
 		t.Fatalf("expected branch upstream to be origin/main, got %q", got)
 	}
