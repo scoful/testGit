@@ -37,7 +37,7 @@ func TestGetDiffPreviewReturnsUntrackedPatch(t *testing.T) {
 	if !preview.WorktreeView.Available {
 		t.Fatalf("expected worktree diff view for untracked file, got %+v", preview)
 	}
-	if preview.WorktreeView.Original.Exists {
+	if preview.WorktreeView.Original.Exists {22
 		t.Fatalf("expected empty original side for untracked file, got %+v", preview.WorktreeView)
 	}
 	if !preview.WorktreeView.Modified.Exists || !containsAll(preview.WorktreeView.Modified.Content, "new file") {
@@ -157,7 +157,7 @@ func TestCommitRepositoryChangesCommitsOnlySelectedFiles(t *testing.T) {
 	if strings.Contains(showOutput, "keep.txt") {
 		t.Fatalf("expected keep.txt to stay out of commit, got %q", showOutput)
 	}
-}
+}11
 
 func TestCommitRepositoryChangesRejectsEmptyMessage(t *testing.T) {
 	requireGitInstalled(t)
